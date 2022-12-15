@@ -74,6 +74,17 @@ a {
     cursor: pointer;
 }
 
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    align-items: flex-end;
+}
+
+.input-submit{
+    width: max-content !important;
+}
+
 @media (max-width:1080px){
     .header{
         padding: 0px 5%;

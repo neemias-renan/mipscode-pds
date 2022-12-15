@@ -1,8 +1,6 @@
 article {
     display: flex;
     flex-direction: column;
-
-    background: url("{% static 'mipscode/svgs/texture.svg' %}");
 }
 
 article .section-one {
@@ -126,9 +124,8 @@ article .section-three h3 {
 
 article .section-three .cards {
     display: flex;
-    width: 100%;
     justify-content: space-between;
-
+    gap: 1em;
 }
 
 article .section-three .cards .card {
@@ -184,7 +181,7 @@ article .section-four {
     align-items: center;
     height: 29.5em;
     justify-content: center;
-    margin-bottom: 15em;
+    margin-bottom: 4em;
     gap: 5em;
     padding: 0px 13%;
 }
@@ -239,4 +236,159 @@ article .section-four .group .details .avatar {
     height: 70px;
     border: 3px solid #2EF2AA;
     border-radius: 109px;
+}
+
+
+article .section-five {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 29.5em;
+    justify-content: center;
+    margin-bottom: 15em;
+    gap: 2em;
+    padding: 0px 13%;
+}
+
+article .section-five .group {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+article .section-five h3 {
+    font-size: 25px;
+    margin: 0;
+    color: white;
+}
+
+article .section-five p {
+    font-size: small;
+    margin: 0;
+    color: white;
+}
+
+article .section-five form {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+article .section-five form .input-form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px 10px;
+    gap: 10px;
+    width: 527px;
+    border: 1px solid #F0F0F0;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    font-size: medium;
+    font-family: inter;
+}
+
+footer {
+    background: #151518;
+    width: 100%;
+    height: 30em;
+}
+
+footer .div-padding {
+    padding: 7% 13% 0px 13%;
+    display: flex;
+    flex-direction: column;
+    gap: 6em;
+}
+
+footer .div-padding .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer .div-padding .top .logo-white {
+    width: 115px;
+}
+
+footer .div-padding .top .group {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 6em;
+}
+
+footer .div-padding .top .group .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+footer .div-padding .top .group .links h4 {
+    margin: 0;
+    font-size: 15px;
+}
+
+footer .div-padding .top .links-externs {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+footer .div-padding .bottom {
+    color: white;
+    border-top: 1px solid;
+    /* border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.325) 24.48%, rgba(255, 255, 255, 0.5) 40.1%, rgba(255, 255, 255, 0.5) 50.52%, rgba(255, 255, 255, 0.36) 73.44%, rgba(255, 255, 255, 0) 100%); */
+    text-align: center;
+    padding: 2em;
+    font-size: 13px;
+}
+
+@media (max-width:1080px) {
+    .section-three {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    article .section-three .cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:910px) {
+    article .section-one h1 {
+        font-size: -webkit-xxx-large;
+        line-height: normal;
+
+    }
+
+    article .section-one {
+        align-items: flex-start;
+    }
+
+    article .section-two .section-two-divisions .division-two {
+        width: 100%;
+        display: none;
+    }
+
+    article .section-five form .input-form {
+        width: 100%;
+    }
+
+    article .section-four .group .details .avatar {
+        display: none;
+    }
+
+    footer .div-padding .top {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+    }
+
 }

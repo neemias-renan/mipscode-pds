@@ -62,9 +62,12 @@
         <h3>DEPOIMENTOS</h3>
 
         <div class="group">
-            <div>  <img src="{% static 'mipscode/svgs/icon-aspas.svg' %}"> </div>
+            <div> <img src="{% static 'mipscode/svgs/icon-aspas.svg' %}"> </div>
             <div class="texts">
-                <p class="comments">O site MipsCode é um ótimo recurso para aprender e praticar mips. O site fornece<br> uma variedade de exemplos e tutoriais para ajudar os usuários a se familiarizarem<br> com a linguagem. Eu recomendaria este site para qualquer pessoa que esteja<br> procurando um bom recurso para aprender assembly mips.</p>
+                <p class="comments">O site MipsCode é um ótimo recurso para aprender e praticar mips. O site fornece<br>
+                    uma variedade de exemplos e tutoriais para ajudar os usuários a se familiarizarem<br> com a
+                    linguagem. Eu recomendaria este site para qualquer pessoa que esteja<br> procurando um bom recurso
+                    para aprender assembly mips.</p>
                 <div class="texts-identification">
                     <h4>João Pereira</h4>
                     <p>Professor de Arquitetura de Computadores</p>
@@ -76,9 +79,51 @@
                 <div class="nexts"></div>
             </div>
         </div>
-
-
     </section>
 
+    <section class="section-five">
+        <div class="group">
+            <h3>CONTATO</h3>
+            <p>Alguma dúvida? Fale com a gente.</p>
+        </div>
+
+        <form action="#" class="form">
+            <input type="text" class="input-form" placeholder="Nome*">
+            <input type="email" class="input-form" placeholder="Email*">
+            <textarea name="content" id="content" cols="30" rows="10" class="input-form" placeholder="Mensagem"></textarea>
+            <input class="green-button input-submit" type="submit" value="Enviar">
+        </form>
+    </section>
 </article>
+
+<footer>
+    <div class="div-padding">
+        <div class="top">
+            <img class="logo-white" src="{% static 'mipscode/svgs/logo-white.svg' %}">
+            <div class="group">
+                <div class="links">
+                    <h4>Rotas Principais</h4>
+                    <a href="">Tutorial</a>
+                    <a href="">Comunidade</a>
+                    <a href="">Documentação</a>
+                    <a href="">Artigos</a>
+                    <a href="">Fórum</a>
+                </div>
+
+                <div class="links">
+                    <h4>Sobre nós</h4>
+                    <a href="">Quem Somos</a>
+                    <a href="">Fale conosco</a>
+                    <a href="">Termos de Serviços</a>
+                </div>
+            </div>
+            <div class="links-externs">
+                <img src="{% static 'mipscode/svgs/icon-github.svg' %}">
+                <img src="{% static 'mipscode/svgs/icon-instagram.svg' %}">
+            </div>
+        </div>
+        <div class="bottom">© 2022 MipsCode. Todos os direitos reservados.</div>
+    </div>
+</footer>
+
 {% endblock article %}
