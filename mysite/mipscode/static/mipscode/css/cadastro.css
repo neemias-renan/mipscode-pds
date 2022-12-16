@@ -63,7 +63,7 @@ article .section-one .form .div-form .input-button {
 
 article .section-one .form .div-form .division {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 1em
 }
 

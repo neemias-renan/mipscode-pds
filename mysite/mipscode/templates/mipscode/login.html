@@ -10,18 +10,20 @@
     <section class="section-one">
         <form action="#" class="form">
             <h3>ENTRE NA SUA CONTA</h3>
-            <div class="div-form">                
+            <div class="div-form">
                 <input class="input-form" type="text" name="user" placeholder="Email ou nome de usuário">
                 <input class="input-form" type="password" placeholder="Senha">
-                <input type="button" value="Conecte-se">
-                <div>
-                    <a href="#">Crie sua conta</a>
+                <input class="input-button" type="button" value="Conecte-se">
+                <div class="division">
+                    <a href="{% url 'mipscode:cadastro' %}" class="text-green">Crie sua conta</a>
                     <a href="#">Esqueceu a senha?</a>
                 </div>
-                <button>
-                    <img src="{% static 'mipscode/svgs/icon-google.svg' %}">
-                    Continuar com o Google
-                </button>
+                <a href="#">
+                    <button class="input-button-link">
+                        <img src="{% static 'mipscode/svgs/icon-google.svg' %}">
+                        Continuar com o Google
+                    </button>
+                </a>
             </div>
         </form>
     </section>
