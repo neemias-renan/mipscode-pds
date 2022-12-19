@@ -2,15 +2,41 @@
 {% load static %}
 
 {% block statics %}
-<link rel="stylesheet" href="{% static 'mipscode/css/index.css' %}">
+<link rel="stylesheet" href="{% static 'mipscode/css/documentacao.css' %}">
 {% endblock statics %}
 
 {% block article %}
 <article>
-    {% for line in tag %}
-        {% if line == h1 %}
-            <h1>{{ line }}</h1>
-        {% endif %}
-    {% endfor %}
+    <header class="article-header">
+        <nav class="nav-maps">
+            <img src="{% static 'mipscode/svgs/icons-home.svg' %}">
+            <p class="text-opacity-mini">Início</p>
+            <p class="text-opacity-medium">/</p>
+            <p class="text-green">Documentação</p>
+        </nav>
+    </header>
+    <section class="content-documentation">
+        <div class="content-div">
+            {% for key, value in document.content.items %}
+                {% if key == "title" %}
+                <h1 class="h1">{{value}}</h1>
+                {% endif %}
+ 
+                {% if key == "h3" %}
+                <h3 class="h3">{{ value }}</h3>
+                {% endif %}
+
+                {% if key == "p" %}
+                <p class="p">{{ value }}</p>
+                {% endif %}
+
+            {% endfor %}
+        </div>
+
+        <div class="content-roadmap">
+
+        </div>
+
+    </section>
 </article>
 {% endblock article %}

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.views import View
 from .models import User, UserSettings,Documentation
 from django.http import HttpResponseRedirect
@@ -32,12 +32,9 @@ class CadastroView(View):
 
 class DocumentacaoView(View):
     def get(self, request, *args, **kwargs):
-        p = Documentation.objects.filter(title='Teste')
-        v = p[0].content
-        # for line in v:
-        #     x = v[line]
-
-        return render(request, "mipscode/documentacao.html",{'tag': v ,'content': v.values() })
+        documentation = get_object_or_404(Documentation, pk = kwargs['pk'])
+        print(documentation)
+        return render(request, "mipscode/documentacao.html",{'document': documentation })
 
 
 class IdeView(View):
