@@ -7,6 +7,10 @@
 
 {% block article %}
 <article>
-
+    {% for line in tag %}
+        {% if line == h1 %}
+            <h1>{{ line }}</h1>
+        {% endif %}
+    {% endfor %}
 </article>
 {% endblock article %}

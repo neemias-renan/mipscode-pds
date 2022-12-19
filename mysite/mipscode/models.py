@@ -41,7 +41,7 @@ class Tutorial(models.Model):
 
     title = models.CharField(max_length = 150)
     description = models.CharField(max_length = 300)
-    content = models.TextField(default='')
+    content = models.JSONField(null=True)
 
     created_at = models.DateTimeField('Created Date', default=timezone.now())
     
@@ -51,14 +51,14 @@ class Tutorial(models.Model):
         return now - datetime.timedelta(days=1) <= self.data <= now
 
     def __str__(self):
-        return self.titulo
+        return self.title
 
 class Project(models.Model):
     user = models.ForeignKey(User, on_delete = models.CASCADE)
 
     title = models.CharField(max_length = 50)
     description = models.CharField(max_length = 250)
-    content = models.TextField(default='') #alterar para JSONField() e salvar o objeto 'sys' daquele projeto como json
+    content = models.JSONField(null=True) #alterar para JSONField() e salvar o objeto 'sys' daquele projeto como json
     created_at = models.DateTimeField('Created Date', default=timezone.now())
 
     def was_published_recently(self):
@@ -66,4 +66,11 @@ class Project(models.Model):
         return now - datetime.timedelta(days=1) <= self.data <= now
 
     def __str__(self):
-        return self.titulo
+        return self.title
+
+class Documentation(models.Model):
+    title = models.CharField(max_length = 50)
+    content = models.JSONField(null=True)
+    
+    def __str__(self):
+        return self.title

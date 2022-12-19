@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import User, UserSettings, Tutorial, Project
+from .models import User, UserSettings, Tutorial, Project, Documentation
 
 class UsersettingsInline(admin.TabularInline):
     model = UserSettings
@@ -26,4 +26,9 @@ class UserAdmin(admin.ModelAdmin):
     ]
     inlines = [TutorialInline,ProjectInline,UsersettingsInline]
 
+class DocumentationArea(admin.TabularInline):
+    model = Documentation
+
+
 admin.site.register(User,UserAdmin)
+admin.site.register(Documentation)
