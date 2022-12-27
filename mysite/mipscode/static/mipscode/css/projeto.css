@@ -1,0 +1,102 @@
+article {
+    color: white;
+}
+
+article .article-header {
+    margin-top: 4.5em;
+    padding: 0px 13%;
+}
+
+article .article-header .title-local {
+    margin: 0;
+}
+
+article .nav-maps {
+    display: flex;
+
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+}
+
+article .nav-maps p {
+    font-size: smaller;
+}
+
+article .nav-maps .text-opacity-mini {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+article .nav-maps .text-opacity-medium {
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+article .nav-maps .text-green {
+    color: #2EF2AA;
+}
+
+
+article .content-projetos {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 13%
+}
+
+article .content-projetos .content-buttons{
+    display: flex;
+    gap: 1em;
+}
+
+article .content-projetos .content-filtersesearch{
+    
+}
+
+article .content-projetos .content-buttons .button-green-solid {
+    background: #2EF2AA;
+    border: 1px solid #2EF2AA;
+    border-radius: 5px;
+    width: 200px;
+    height: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+article .content-projetos .content-buttons .button-white-solid {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    width: 200px;
+    height: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+}
+
+article .content-projetos .content-div .h1 {
+    margin: 0px;
+    font-size: 32px;
+    border-bottom: 2px solid #333333;
+    padding-bottom: 1em;
+    padding-right: 9em;
+}
+
+article .content-projetos .content-div .h3 {
+    font-size: 22px;
+}
+
+article .content-projetos .content-div .p {
+    font-size: 18px;
+}
+
+article .content-projetos .content-div .content-roadmap {
+    width: 50%;
+}

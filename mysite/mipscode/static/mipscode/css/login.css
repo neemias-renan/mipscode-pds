@@ -67,6 +67,14 @@ article .section-one .form .div-form .division {
     margin-top: 1em
 }
 
+.p_message{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    color: #ff5a5a;
+    
+}
+
 .input-form:focus-visible,
 .input-form:active {
     outline: none;

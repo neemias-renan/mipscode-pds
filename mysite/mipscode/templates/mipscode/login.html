@@ -8,12 +8,14 @@
 {% block article %}
 <article>
     <section class="section-one">
-        <form action="#" class="form">
+        <form action="{% url 'mipscode:login' %}" method="post" class="form">
+            {% csrf_token %}
             <h3>ENTRE NA SUA CONTA</h3>
             <div class="div-form">
-                <input class="input-form" type="text" name="user" placeholder="Email ou nome de usuário">
-                <input class="input-form" type="password" placeholder="Senha">
-                <input class="input-button" type="button" value="Conecte-se">
+                <input class="input-form" type="text" name="username" placeholder="Email ou nome de usuário">
+                <input class="input-form" type="password" name="password" placeholder="Senha">
+                <input class="input-button" type="submit" value="Conecte-se">
+                <p class="p_message">{{mensagem}}</p>
                 <div class="division">
                     <a href="{% url 'mipscode:cadastro' %}" class="text-green">Crie sua conta</a>
                     <a href="#">Esqueceu a senha?</a>

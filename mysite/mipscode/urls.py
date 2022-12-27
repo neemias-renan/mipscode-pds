@@ -11,4 +11,5 @@ urlpatterns = [
     # path('documentacao/', views.DocumentacaoView.as_view(), name='documentacao'),
     path('documentacao/<int:pk>/', views.DocumentacaoView.as_view(), name='documentacao'),
     path('ide/', views.IdeView.as_view(), name='ide'),
+    path('projeto/', views.ProjetoView.as_view(), name='projeto'),
 ]
