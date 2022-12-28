@@ -87,12 +87,12 @@ article .content-projetos .content-projetos-all {
 
 article .content-projetos .content-projetos-all .project {
     height: 109px;
-    width: 100%;
     border: 1px solid #333333;
     border-radius: 13px;
     display: flex;
     align-items: center;
     padding: 0px 27px;
+    justify-content: space-between;
 }
 
 article .content-projetos .content-projetos-all .project .titles {
@@ -112,7 +112,7 @@ article .content-projetos .content-projetos-all .project .titles .time {
     font-size: 13px;
     line-height: 17px;
     color: rgba(255, 255, 255, 0.5);
-    margin: 0;
+    margin: 2px 0px 6px;
 }
 
 article .content-projetos .content-projetos-all .project .titles .description {
@@ -122,6 +122,31 @@ article .content-projetos .content-projetos-all .project .titles .description {
     color: rgba(255, 255, 255, 0.8);
     margin: 0;
 }
+
+article .content-projetos .content-projetos-all .project .options {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+article .content-projetos .content-projetos-all .project .options .button-open{
+    background: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 34px;
+    width: 145px;
+    color: white;
+    padding: 0px 15px;
+    font-family: 'Inter';
+}
+
+article .content-projetos .content-projetos-all .project .options .div-options{
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+
 
 article .content-projetos .content-buttons .button-green-solid {
     background: #2EF2AA;
