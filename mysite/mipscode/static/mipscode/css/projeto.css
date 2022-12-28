@@ -43,13 +43,84 @@ article .content-projetos {
     padding: 0px 13%
 }
 
-article .content-projetos .content-buttons{
+article .content-projetos .content-buttons {
     display: flex;
     gap: 1em;
 }
 
-article .content-projetos .content-filtersesearch{
-    
+article .content-projetos .content-filtersesearch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+article .content-projetos .content-filtersesearch .search {
+    background: rgba(217, 217, 217, 0.02);
+    border: 1px solid rgba(208, 208, 208, 0.5);
+    border-radius: 5px;
+    height: 34px;
+    width: 263px;
+    color: white;
+    padding: 0px 15px;
+    font-family: 'Inter';
+}
+
+article .content-projetos .content-filtersesearch .filters {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 34px;
+    width: 199px;
+    color: white;
+    padding: 0px 15px;
+    font-family: 'Inter';
+
+}
+
+article .content-projetos .content-projetos-all {
+    margin-top: 2em;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+
+article .content-projetos .content-projetos-all .project {
+    height: 109px;
+    width: 100%;
+    border: 1px solid #333333;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    padding: 0px 27px;
+}
+
+article .content-projetos .content-projetos-all .project .titles {
+    display: flex;
+    flex-direction: column;
+}
+
+article .content-projetos .content-projetos-all .project .titles .title {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 110%;
+    margin: 0;
+}
+
+article .content-projetos .content-projetos-all .project .titles .time {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+article .content-projetos .content-projetos-all .project .titles .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 110%;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
 }
 
 article .content-projetos .content-buttons .button-green-solid {

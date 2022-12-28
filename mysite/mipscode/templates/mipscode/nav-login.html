@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>MipsCode</title>
+
+    {% load static %}
+    {% block statics %}{% endblock statics %}
+
+    <link rel="stylesheet" href="{% static 'mipscode/css/nav-login.css' %}">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header-nav">
+            <div class="header-nav-logo">
+                <img src="{% static 'mipscode/svgs/logo-min.svg' %}" alt="MipsCode Logo" class="logo">
+            </div>
+            <div class="header-nav-links">
+                <a href="{% url 'mipscode:index' %}">Dashboard</a>
+                <a href="{% url 'mipscode:ide' %}">Documentação</a>
+                <a href="{% url 'mipscode:index' %}">IDE</a>
+                <a href="{% url 'mipscode:documentacao' 1 %}">Repositório</a>
+                <a href="{% url 'mipscode:documentacao' 1 %}">Tutoriais</a>
+
+            </div>
+            <div class="header-nav-buttons">
+                <a href="#" class="green-text">
+                    <div class="user"></div>
+                    <p class="username">{{user.username}}</p>
+                </a>
+                <a href="{% url 'mipscode:cadastro' %}">
+                    <img src="{% static 'mipscode/svgs/icon-config.svg' %}" alt="">
+                </a>
+            </div>
+        </nav>
+
+        <nav class="header-nav-mobile">
+            <img src="{% static 'mipscode/svgs/logo-min.svg' %}" alt="MipsCode Logo" class="logo">
+            <button class="menu">
+                <img src="{% static 'mipscode/svgs/menu-min.svg' %}" alt="Menu" >
+            </button>
+        </nav>
+    </header>
+ 
+    <!-- Criar o menu para mobile -->
+
+
+    {% block article %}{% endblock article %}
+
+    {% block footer %}{% endblock footer %}
+
+</body>
+
+</html>
