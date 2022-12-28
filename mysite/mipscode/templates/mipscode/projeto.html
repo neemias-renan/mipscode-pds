@@ -49,35 +49,25 @@
                 </div>
             </div>
 
-            <div class="project">
-                <div class="titles">
-                    <h2 class="title">Multiplicação por 2.</h2>
-                    <p class="time">3 horas atrás</p>
-                    <p class="description">Projeto que realiza a multiplicação de um valor por 2.</p>
-                </div>
-                <div class="options">
-                    <button class="button-open">Abrir arquivos</button>
-                    <div class="div-options">
-                        <img src="{% static 'mipscode/svgs/icon-favorite.svg' %}">
-                        <img src="{% static 'mipscode/svgs/icon-options.svg' %}">
+            {% for projeto in projects %}
+                <div class="project">
+                    <div class="titles">
+                        <h2 class="title">{{projeto.title}}</h2>
+                        <p class="time">3 horas atrás</p>
+                        <p class="description">{{projeto.description}}</p>
+                    </div>
+                    <div class="options">
+                        <button class="button-open">Abrir arquivos</button>
+                        <div class="div-options">
+                            <img src="{% static 'mipscode/svgs/icon-favorite.svg' %}">
+                            <img src="{% static 'mipscode/svgs/icon-options.svg' %}">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="project">
-                <div class="titles">
-                    <h2 class="title">Multiplicação por 2.</h2>
-                    <p class="time">3 horas atrás</p>
-                    <p class="description">Projeto que realiza a multiplicação de um valor por 2.</p>
-                </div>
-                <div class="options">
-                    <button class="button-open">Abrir arquivos</button>
-                    <div class="div-options">
-                        <img src="{% static 'mipscode/svgs/icon-favorite.svg' %}">
-                        <img src="{% static 'mipscode/svgs/icon-options.svg' %}">
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+
+
         </div>
 
     </section>
