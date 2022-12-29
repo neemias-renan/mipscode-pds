@@ -1,22 +1,35 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.views import View
-from .models import UserNew, UserSettings, Documentation,Project
+from .models import User, UserSettings, Documentation,Project
 from django.http import HttpResponseRedirect
 from django.http.response import HttpResponse
 from django.urls import reverse
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate,logout
+from django.contrib.auth import login as login_django
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+import json
 
 
 class IndexView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "mipscode/index.html")
 
+
 class LoginView(View):
     def post(self, request, *args, **kwargs):
-        username = request.POST.get('username')
+        email = request.POST.get('email')
         password = request.POST.get('password')
-        pass
-       
-
+        user = authenticate(email = email, password = password)
+        if user is not None:
+            
+            login_django(request, user)
+            return redirect(reverse('mipscode:projeto'))
+        else:
+            mensagem = "Email ou Senha não encontrados"
+            return render(request, "mipscode/login.html", {'mensagem': mensagem })
+            
     def get(self, request, *args, **kwargs):
         mensagem = ""
         return render(request, "mipscode/login.html", {'mensagem': mensagem })
@@ -28,13 +41,15 @@ class CadastroView(View):
         email = request.POST.get('email')
         password = request.POST.get('password')
 
-        user = UserNew.objects.filter(email=email).first()
+        user = User.objects.filter(email=email).first()
+        print(user)
         
         if user:
             return HttpResponse('Já existe com esse email.')
 
-        CreateUser = UserNew.objects.create(name=username, email=email, password=password)
-        CreationSettings = UserSettings.objects.create(user=CreateUser)
+        user = User.objects.create_user(username=username, email=email, password=password)
+        user.save()
+        CreationSettings = UserSettings.objects.create(user=user)
         
         return HttpResponseRedirect(reverse('mipscode:login'))
 
@@ -56,51 +71,16 @@ class IdeView(View):
         
 class ProjetoView(View):
     def get(self, request, *args, **kwargs):
-        user = UserNew.objects.filter(email='teste@gmail.com').first()
+        user = request.user
+
+        # Project.objects.create(user=user,title="multiplicação por 2",description="Projeto que realiza a multiplicação de um valor por 2.")
         projetos = Project.objects.filter(user=user)
-        return render(request, "mipscode/projeto.html",{'user': user, 'projetos': projetos})
 
-    def post(self, request, *args, **kwargs):
-        title = request.POST.get('title')
-        description = request.POST.get('description')
-        user = UserNew.objects.filter(email='teste@gmail.com').first()
+        print(projetos)
+        return render(request, "mipscode/projeto.html",{'user': user,'projects':projetos})
+        # return HttpResponse('faça login')
 
-        CreateProject = Project.objects.create(user= user,title=title, description=description,content= "null")
-
-        return HttpResponseRedirect(reverse('mipscode:projeto'))
-
-class AtualizarProjeto(View):
-    def post(self, request, *args, **kwargs):
-        title = request.POST.get('title')
-        description = request.POST.get('description')
-        projeto = get_object_or_404(Project, pk = kwargs['pk'])
-
-        projeto.title = title
-        projeto.description = description
-        projeto.save()
-        return HttpResponseRedirect(reverse('mipscode:projeto'))
-
-class RemoverProjeto(View):
-    def get(self, request, *args, **kwargs):
-        projeto = Project.objects.get(pk = kwargs['pk'])
-        projeto.delete()
-        return HttpResponseRedirect(reverse('mipscode:projeto'))
-
-class FavoritarProjeto(View):
-    def get(self, request, *args, **kwargs):
-        projeto = Project.objects.get(pk = kwargs['pk'])
-        projeto.favorite = True
-        projeto.save()
-        return HttpResponseRedirect(reverse('mipscode:projeto'))
-
-class DesfavoritarProjeto(View):
-    def get(self, request, *args, **kwargs):
-        projeto = Project.objects.get(pk = kwargs['pk'])
-        projeto.favorite = False
-        projeto.save()
-        
-        return HttpResponseRedirect(reverse('mipscode:projeto'))
-
-
-
-        
+# class LogoutView(View):
+#     def sair(request):
+#         logout(request)
+#         return HttpResponseRedirect('/login')

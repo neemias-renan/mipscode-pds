@@ -25,7 +25,7 @@ body {
     justify-content: space-between;
 }
 
-.logo {
+.logo{
     width: 115px;
 }
 
@@ -40,26 +40,8 @@ body {
     gap: 59px;
 }
 
-.header-nav-buttons .text-user{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 1em;
-}
 
-.header-nav-buttons .text-user .user-avatar {
-    width: 3em;
-    height: 3em;
-    border-radius: 100%;
-    background-size: cover;
-    border: 1px solid white;
-}
-
-.header-nav-buttons .text-user .username{
-    text-transform: capitalize;
-}
-
-.green-text {
+.green-text{
     color: #2EF2AA;
 }
 
@@ -82,44 +64,42 @@ a {
     font-size: 13px;
 }
 
-.header-nav-mobile {
+.header-nav-mobile{
     display: none;
 }
 
-.menu {
+.menu{
     background: none;
     border: none;
     cursor: pointer;
 }
 
-.form {
+.form{
     display: flex;
     flex-direction: column;
     gap: 19px;
     align-items: flex-end;
 }
 
-.input-submit {
+.input-submit{
     width: max-content !important;
 }
 
-@media (max-width:1080px) {
-    .header {
+@media (max-width:1080px){
+    .header{
         padding: 0px 5%;
     }
-
     .header-nav-buttons {
         gap: 36px;
     }
 }
 
-@media (max-width:910px) {
-    .header-nav {
-        display: none !important;
-
+@media (max-width:910px){
+    .header-nav{
+        display: none !important; 
+        
     }
-
-    .header-nav-mobile {
+    .header-nav-mobile{
         display: flex !important;
         width: 100%;
         justify-content: space-between;

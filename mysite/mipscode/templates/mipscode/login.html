@@ -12,7 +12,7 @@
             {% csrf_token %}
             <h3>ENTRE NA SUA CONTA</h3>
             <div class="div-form">
-                <input class="input-form" type="text" name="username" placeholder="Email ou nome de usuário">
+                <input class="input-form" type="email" name="email" placeholder="email">
                 <input class="input-form" type="password" name="password" placeholder="Senha">
                 <input class="input-button" type="submit" value="Conecte-se">
                 <p class="p_message">{{mensagem}}</p>
