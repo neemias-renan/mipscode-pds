@@ -1,0 +1,64 @@
+{% extends "mipscode/nav-initial.html" %}
+{% load static %}
+
+{% block statics %}
+<link rel="stylesheet" href="{% static 'mipscode/css/cadastro.css' %}">
+{% endblock statics %}
+
+{% block article %}
+<article>
+    <section class="section-one">
+        <form action="{% url 'mipscode:cadastro' %}" class="form" method="post">
+            {% csrf_token %}
+            <h3>CRIE UMA NOVA CONTA</h3>
+            <div class="div-form">
+                <input class="input-form" type="text" name="user" placeholder="Nome de Usuário">
+                <input class="input-form" type="email" name="email" placeholder="Email">
+                <input class="input-form" type="password" name="password" placeholder="Senha">
+                <input class="input-form" type="password" placeholder="Confirme a Senha">
+                <input class="input-button" type="submit" value="Cadastrar-se">
+                <div class="division">
+                    <a href="{% url 'mipscode:cadastro' %}" class="text-green">Já possui uma conta?</a>
+                </div>
+                <a href="#">
+                    <button class="input-button-link">
+                        <img src="{% static 'mipscode/svgs/icon-google.svg' %}">
+                        Continuar com o Google
+                    </button>
+                </a>
+            </div>
+        </form>
+    </section>
+
+
+    <footer>
+        <div class="div-padding">
+            <div class="top">
+                <img class="logo-white" src="{% static 'mipscode/svgs/logo-white.svg' %}">
+                <div class="group">
+                    <div class="links">
+                        <h4>Rotas Principais</h4>
+                        <a href="">Tutorial</a>
+                        <a href="">Comunidade</a>
+                        <a href="">Documentação</a>
+                        <a href="">Artigos</a>
+                        <a href="">Fórum</a>
+                    </div>
+
+                    <div class="links">
+                        <h4>Sobre nós</h4>
+                        <a href="">Quem Somos</a>
+                        <a href="">Fale conosco</a>
+                        <a href="">Termos de Serviços</a>
+                    </div>
+                </div>
+                <div class="links-externs">
+                    <img src="{% static 'mipscode/svgs/icon-github.svg' %}">
+                    <img src="{% static 'mipscode/svgs/icon-instagram.svg' %}">
+                </div>
+            </div>
+            <div class="bottom">© 2022 MipsCode. Todos os direitos reservados.</div>
+        </div>
+    </footer>
+</article>
+{% endblock article %}
