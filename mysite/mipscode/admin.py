@@ -1,10 +1,10 @@
 from django.contrib import admin
 
-from .models import User, UserSettings, Tutorial, Project, Documentation
+from .models import UserNew, UserSettings, Tutorial, Project, Documentation
 
 class UsersettingsInline(admin.TabularInline):
     model = UserSettings
-    extra = 1
+    extra = 0
 
     
 class TutorialInline(admin.TabularInline):
@@ -30,5 +30,5 @@ class DocumentationArea(admin.TabularInline):
     model = Documentation
 
 
-admin.site.register(User,UserAdmin)
+admin.site.register(UserNew,UserAdmin)
 admin.site.register(Documentation)

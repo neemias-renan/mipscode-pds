@@ -12,4 +12,10 @@ urlpatterns = [
     path('documentacao/<int:pk>/', views.DocumentacaoView.as_view(), name='documentacao'),
     path('ide/', views.IdeView.as_view(), name='ide'),
     path('projeto/', views.ProjetoView.as_view(), name='projeto'),
+    path('projeto/<int:pk>/atualizar', views.AtualizarProjeto.as_view(), name='atualizarprojeto'),
+    path('projeto/<int:pk>/remover', views.RemoverProjeto.as_view(), name='removerprojeto'),
+    path('projeto/<int:pk>/favoritar', views.FavoritarProjeto.as_view(), name='favoritarprojeto'),
+    path('projeto/<int:pk>/desfavoritar', views.DesfavoritarProjeto.as_view(), name='desfavoritarprojeto'),
+
+
 ]
