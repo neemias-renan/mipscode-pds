@@ -57,7 +57,7 @@ class Tutorial(models.Model):
     def __str__(self):
         return self.title
 
-class Project(models.Model):
+class Repositorio(models.Model):
     user = models.ForeignKey(UserNew, on_delete = models.CASCADE)
     title = models.CharField(max_length = 50)
     description = models.CharField(max_length = 250)

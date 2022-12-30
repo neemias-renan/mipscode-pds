@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.views import View
-from .models import UserNew, UserSettings, Documentation,Project
+from .models import UserNew, UserSettings, Documentation,Repositorio,Tutorial
 from django.http import HttpResponseRedirect
 from django.http.response import HttpResponse
 from django.urls import reverse
@@ -54,52 +54,85 @@ class IdeView(View):
 
         return render(request, "mipscode/ide.html")
         
-class ProjetoView(View):
+class RepositorioView(View):
     def get(self, request, *args, **kwargs):
         user = UserNew.objects.filter(email='teste@gmail.com').first()
-        projetos = Project.objects.filter(user=user)
-        return render(request, "mipscode/projeto.html",{'user': user, 'projetos': projetos})
+        projetos = Repositorio.objects.filter(user=user).order_by('-created_at')
+        return render(request, "mipscode/repositorio.html",{'user': user, 'projetos': projetos})
 
     def post(self, request, *args, **kwargs):
         title = request.POST.get('title')
         description = request.POST.get('description')
         user = UserNew.objects.filter(email='teste@gmail.com').first()
 
-        CreateProject = Project.objects.create(user= user,title=title, description=description,content= "null")
+        CreateProject = Repositorio.objects.create(user= user,title=title, description=description,content= "null")
 
-        return HttpResponseRedirect(reverse('mipscode:projeto'))
+        return HttpResponseRedirect(reverse('mipscode:repositorio'))
+
+class DashboardView(View):
+    def get(self, request, *args, **kwargs):
+        user = UserNew.objects.filter(email='teste@gmail.com').first()
+        projetos = Repositorio.objects.filter(user=user).order_by('-created_at')[:4]
+        tutoriais = Tutorial.objects.all()
+        return render(request, "mipscode/dashboard.html",{'user': user, 'projetos': projetos})
+
+    def post(self, request, *args, **kwargs):
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        user = UserNew.objects.filter(email='teste@gmail.com').first()
+
+        CreateProject = Repositorio.objects.create(user= user,title=title, description=description,content= "null")
+
+        return HttpResponseRedirect(reverse('mipscode:dashboard'))
+
+
+class TutoriaisView(View):
+    def get(self, request, *args, **kwargs):
+        user = UserNew.objects.filter(email='teste@gmail.com').first()
+        projetos = Repositorio.objects.filter(user=user)
+        tutoriais = Tutorial.objects.all()
+        return render(request, "mipscode/dashboard.html",{'user': user, 'projetos': projetos})
+
+    def post(self, request, *args, **kwargs):
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        user = UserNew.objects.filter(email='teste@gmail.com').first()
+
+        CreateProject = Repositorio.objects.create(user= user,title=title, description=description,content= "null")
+
+        return HttpResponseRedirect(reverse('mipscode:repositorio'))
 
 class AtualizarProjeto(View):
     def post(self, request, *args, **kwargs):
         title = request.POST.get('title')
         description = request.POST.get('description')
-        projeto = get_object_or_404(Project, pk = kwargs['pk'])
+        projeto = get_object_or_404(Repositorio, pk = kwargs['pk'])
 
         projeto.title = title
         projeto.description = description
         projeto.save()
-        return HttpResponseRedirect(reverse('mipscode:projeto'))
+        return HttpResponseRedirect(reverse('mipscode:repositorio'))
 
 class RemoverProjeto(View):
     def get(self, request, *args, **kwargs):
-        projeto = Project.objects.get(pk = kwargs['pk'])
+        projeto = Repositorio.objects.get(pk = kwargs['pk'])
         projeto.delete()
-        return HttpResponseRedirect(reverse('mipscode:projeto'))
+        return HttpResponseRedirect(reverse('mipscode:repositorio'))
 
 class FavoritarProjeto(View):
     def get(self, request, *args, **kwargs):
-        projeto = Project.objects.get(pk = kwargs['pk'])
+        projeto = Repositorio.objects.get(pk = kwargs['pk'])
         projeto.favorite = True
         projeto.save()
-        return HttpResponseRedirect(reverse('mipscode:projeto'))
+        return HttpResponseRedirect(reverse('mipscode:repositorio'))
 
 class DesfavoritarProjeto(View):
     def get(self, request, *args, **kwargs):
-        projeto = Project.objects.get(pk = kwargs['pk'])
+        projeto = Repositorio.objects.get(pk = kwargs['pk'])
         projeto.favorite = False
         projeto.save()
         
-        return HttpResponseRedirect(reverse('mipscode:projeto'))
+        return HttpResponseRedirect(reverse('mipscode:repositorio'))
 
 
 

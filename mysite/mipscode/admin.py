@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import UserNew, UserSettings, Tutorial, Project, Documentation
+from .models import UserNew, UserSettings, Tutorial, Repositorio, Documentation
 
 class UsersettingsInline(admin.TabularInline):
     model = UserSettings
@@ -11,8 +11,8 @@ class TutorialInline(admin.TabularInline):
     model = Tutorial
     extra = 0
 
-class ProjectInline(admin.TabularInline):
-    model = Project
+class RepositorioInline(admin.TabularInline):
+    model = Repositorio
     extra = 0
 
 class UserAdmin(admin.ModelAdmin):
@@ -24,7 +24,7 @@ class UserAdmin(admin.ModelAdmin):
         (None,        {'fields': ['avatar']}),
         (None,        {'fields': ['user_type']}),
     ]
-    inlines = [TutorialInline,ProjectInline,UsersettingsInline]
+    inlines = [TutorialInline,RepositorioInline,UsersettingsInline]
 
 class DocumentationArea(admin.TabularInline):
     model = Documentation
