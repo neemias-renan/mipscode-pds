@@ -1,6 +1,7 @@
 article {
     display: flex;
     flex-direction: column;
+    color: white;
 }
 
 article .section-one {
@@ -12,30 +13,6 @@ article .section-one {
     padding: 0px 13%;
     margin-bottom: 5.5em;
 }
-
-article .section-one h1 {
-    font-family: 'Inter';
-    font-weight: 800;
-    font-size: 93px;
-    line-height: 126px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #2EF2AA;
-    margin: 0;
-
-}
-
-article .section-one p {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17.2px;
-    line-height: 27px;
-    margin: 0;
-    color: white;
-}
-
 
 article .section-two {
     display: flex;
@@ -53,11 +30,9 @@ article .section-two .section-two-divisions {
     padding: 0px 13%;
     gap: 7em;
     align-items: center;
-
 }
 
 article .section-two .section-two-divisions .division-one {
-    color: white;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -71,39 +46,9 @@ article .section-two .section-two-divisions .division-one .group {
     flex-direction: column;
 }
 
-article .section-two .section-two-divisions .division-one .group h3 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
-}
-
-article .section-two .section-two-divisions .division-one .group p {
-    margin: 0;
-    font-style: normal;
-    font-weight: 300;
-    font-size: small;
-
-}
-
 article .section-two .section-two-divisions .division-two {
     width: 100%;
 }
-
-.green-button {
-    background: rgba(46, 242, 170, 0.05);
-    border: 1px solid #2EF2AA;
-    border-radius: 5px;
-    color: #2EF2AA;
-    font-weight: 500;
-    font-family: inter;
-    font-size: 13px;
-    padding: 8px 29px;
-    display: flex;
-    align-items: center;
-    gap: 1em;
-}
-
 
 article .section-three {
     display: flex;
@@ -114,12 +59,6 @@ article .section-three {
     gap: 5em;
     padding: 0px 13%;
     margin-bottom: 4em;
-}
-
-article .section-three h3 {
-    font-size: 25px;
-    margin: 0;
-    color: white;
 }
 
 article .section-three .cards {
@@ -214,16 +153,12 @@ article .section-four .group .texts .texts-identification {
 
 article .section-four .group .texts .texts-identification h4 {
     font-weight: 600;
-    font-size: 22px;
     line-height: 36px;
-    color: #2EF2AA;
     margin: 0;
 }
 
 article .section-four .group .texts .texts-identification p {
     font-weight: 600;
-    font-size: small;
-    color: white;
     margin: 0;
 }
 
@@ -269,26 +204,8 @@ article .section-five p {
     color: white;
 }
 
-article .section-five form {
-    display: flex;
-    flex-direction: column;
-    gap: 19px;
-}
 
-article .section-five form .input-form {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 15px 10px;
-    gap: 10px;
-    width: 527px;
-    border: 1px solid #F0F0F0;
-    border-radius: 5px;
-    background: none;
-    color: white;
-    font-size: medium;
-    font-family: inter;
-}
+
 
 footer {
     background: #151518;
@@ -340,10 +257,9 @@ footer .div-padding .top .links-externs {
 footer .div-padding .bottom {
     color: white;
     border-top: 1px solid;
-    /* border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.325) 24.48%, rgba(255, 255, 255, 0.5) 40.1%, rgba(255, 255, 255, 0.5) 50.52%, rgba(255, 255, 255, 0.36) 73.44%, rgba(255, 255, 255, 0) 100%); */
-    text-align: center;
     padding: 2em;
     font-size: 13px;
+    justify-content: center;
 }
 
 @media (max-width:1080px) {
@@ -362,12 +278,6 @@ footer .div-padding .bottom {
 }
 
 @media (max-width:910px) {
-    article .section-one h1 {
-        font-size: -webkit-xxx-large;
-        line-height: normal;
-
-    }
-
     article .section-one {
         align-items: flex-start;
     }

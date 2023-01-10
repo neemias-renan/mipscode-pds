@@ -41,21 +41,6 @@ body {
 }
 
 
-.green-text{
-    color: #2EF2AA;
-}
-
-.white-button {
-    background: rgba(217, 217, 217, 0.1);
-    border: 1px solid #C9B9B9;
-    border-radius: 5px;
-    height: 33px;
-    color: #FFFFFF;
-    font-weight: 500;
-    font-family: inter;
-    font-size: 13px;
-    padding: 0px 29px;
-}
 
 a {
     text-decoration: none;

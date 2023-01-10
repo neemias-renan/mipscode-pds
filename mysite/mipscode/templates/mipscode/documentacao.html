@@ -10,26 +10,31 @@
     <header class="article-header">
         <nav class="nav-maps">
             <img src="{% static 'mipscode/svgs/icons-home.svg' %}">
-            <p class="text-opacity-mini">Início</p>
-            <p class="text-opacity-medium">/</p>
-            <p class="text-green">Documentação</p>
+            <p class="color-white-opacity50 fs-6">Início</p>
+            <p class="color-white-opacity50 fs-5">/</p>
+            <p class="color-green fs-5">Documentação</p>
         </nav>
     </header>
     <section class="content-documentation">
         <div class="content-div">
-            {% for key, value in document.content.items %}
-                {% if key == "title" %}
-                <h1 class="h1">{{value}}</h1>
+            <h1 class="title">{{title}}</h1>
+            {% for value in document %}
+                {{value.h3}}
+                <!-- {% if key == "title" %} -->
+                <!-- <h1 class="title">{{value}}</h1>
                 {% endif %}
  
-                {% if key == "h3" %}
-                <h3 class="h3">{{ value }}</h3>
+                {% if key == "content" %}
+                    { % for content in document.content %}
+                    
+                    <h3 class="h3">{{value}}</h3>
                 {% endif %}
 
                 {% if key == "p" %}
                 <p class="p">{{ value }}</p>
-                {% endif %}
+                {% endif %} -->
 
+                <P>--</P>
             {% endfor %}
         </div>
 

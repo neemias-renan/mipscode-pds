@@ -3,25 +3,25 @@
 
 {% block statics %}
 <link rel="stylesheet" href="{% static 'mipscode/css/index.css' %}">
+<link rel="stylesheet" href="{% static 'mipscode/css/base.css' %}">
 {% endblock statics %}
 
 {% block article %}
 <article>
     <section class="section-one">
-        <h1>MipsCode</h1>
-        <p>Uma ferramenta para desenvolver código em assembly para o processador MIPS</p>
+        <h1 class="fs-0 color-green">MipsCode</h1>
+        <p class="fs-4">Uma ferramenta para desenvolver código em assembly para o processador MIPS</p>
     </section>
 
     <section class="section-two">
         <div class="section-two-divisions">
             <div class="division-one">
                 <div class="group">
-                    <h3>FEITO PARA VOCÊ</h3>
-                    <p>O MipsCode possui uma IDE voltada para assembly mips, ideal para quem precisa de um ambiente de
+                    <h3 class="fs-2">FEITO PARA VOCÊ</h3>
+                    <p class="fs-5">O MipsCode possui uma IDE voltada para assembly mips, ideal para quem precisa de um ambiente de
                         desenvolvimento completo e integrado para a linguagem.</p>
                 </div>
-                <button class="green-button">Faça uma demonstração <img
-                        src="{% static 'mipscode/svgs/icon-left.svg' %}"></button>
+                <button class="fs-5 button-green color-green">Faça uma demonstração<img src="{% static 'mipscode/svgs/icon-left.svg' %}"></button>
             </div>
 
             <div class="division-two"></div>
@@ -29,28 +29,28 @@
     </section>
 
     <section class="section-three">
-        <h3>SEJA UM EXPLORADOR</h3>
+        <h3 class="fs-2">SEJA UM EXPLORADOR</h3>
 
         <div class="cards">
             <div class="card">
                 <img class="icon" src="{% static 'mipscode/svgs/icon-mao.svg' %}">
                 <div class="group">
-                    <h4>Está iniciando agora?</h4>
-                    <p>Podemos te ajudar a programar em assembly de forma fácil e intuitiva.</p>
+                    <h4 class="fs-5">Está iniciando agora?</h4>
+                    <p class="fs-6">Podemos te ajudar a programar em assembly de forma fácil e intuitiva.</p>
                 </div>
             </div>
             <div class="card">
                 <img class="icon" src="{% static 'mipscode/svgs/icon-mao2.svg' %}">
                 <div class="group">
-                    <h4>Compartilhe experiência</h4>
-                    <p>Uma comunidade para compartilhar conhecimento sobre programação.</p>
+                    <h4 class="fs-5">Compartilhe experiência</h4>
+                    <p class="fs-6">Uma comunidade para compartilhar conhecimento sobre programação.</p>
                 </div>
             </div>
             <div class="card">
                 <img class="icon" src="{% static 'mipscode/svgs/icon-save.svg' %}">
                 <div class="group">
-                    <h4>Guarde seus projetos</h4>
-                    <p>Você pode salvar seus projetos e acessá-los a qualquer momento.</p>
+                    <h4 class="fs-5">Guarde seus projetos</h4>
+                    <p class="fs-6">Você pode salvar seus projetos e acessá-los a qualquer momento.</p>
                 </div>
             </div>
         </div>
@@ -59,18 +59,18 @@
 
 
     <section class="section-four">
-        <h3>DEPOIMENTOS</h3>
+        <h3 class="fs-2">DEPOIMENTOS</h3>
 
         <div class="group">
             <div> <img src="{% static 'mipscode/svgs/icon-aspas.svg' %}"> </div>
             <div class="texts">
-                <p class="comments">O site MipsCode é um ótimo recurso para aprender e praticar mips. O site fornece<br>
+                <p class="comments fs-6">O site MipsCode é um ótimo recurso para aprender e praticar mips. O site fornece<br>
                     uma variedade de exemplos e tutoriais para ajudar os usuários a se familiarizarem<br> com a
                     linguagem. Eu recomendaria este site para qualquer pessoa que esteja<br> procurando um bom recurso
                     para aprender assembly mips.</p>
                 <div class="texts-identification">
-                    <h4>João Pereira</h4>
-                    <p>Professor de Arquitetura de Computadores</p>
+                    <h4 class="fs-5 color-green">João Pereira</h4>
+                    <p class="fs-6 bold">Professor de Arquitetura de Computadores</p>
                 </div>
             </div>
 
@@ -83,15 +83,15 @@
 
     <section class="section-five">
         <div class="group">
-            <h3>CONTATO</h3>
-            <p>Alguma dúvida? Fale com a gente.</p>
+            <h3 class="fs-2">CONTATO</h3>
+            <p class="fs-5">Alguma dúvida? Fale com a gente.</p>
         </div>
 
         <form action="#" class="form">
-            <input type="text" class="input-form" placeholder="Nome*">
-            <input type="email" class="input-form" placeholder="Email*">
-            <textarea name="content" id="content" cols="30" rows="10" class="input-form" placeholder="Mensagem"></textarea>
-            <input class="green-button input-submit" type="submit" value="Enviar">
+            <input type="text" class="fs-6 input" placeholder="Nome*">
+            <input type="email" class="fs-6 input" placeholder="Email*">
+            <textarea name="content" id="content" cols="30" rows="10" class="fs-6 input" placeholder="Mensagem"></textarea>
+            <input class="fs-6 button-green color-green" type="submit" value="Enviar">
         </form>
     </section>
 </article>
@@ -102,19 +102,19 @@
             <img class="logo-white" src="{% static 'mipscode/svgs/logo-white.svg' %}">
             <div class="group">
                 <div class="links">
-                    <h4>Rotas Principais</h4>
-                    <a href="">Tutorial</a>
-                    <a href="">Comunidade</a>
-                    <a href="">Documentação</a>
-                    <a href="">Artigos</a>
-                    <a href="">Fórum</a>
+                    <h4 class="fs-5 bold">Rotas Principais</h4>
+                    <a class="fs-6" href="">Tutorial</a>
+                    <a class="fs-6" href="">Comunidade</a>
+                    <a class="fs-6" href="">Documentação</a>
+                    <a class="fs-6" href="">Artigos</a>
+                    <a class="fs-6" href="">Fórum</a>
                 </div>
 
                 <div class="links">
-                    <h4>Sobre nós</h4>
-                    <a href="">Quem Somos</a>
-                    <a href="">Fale conosco</a>
-                    <a href="">Termos de Serviços</a>
+                    <h4 class="fs-5 bold" >Sobre nós</h4>
+                    <a class="fs-6" href="">Quem Somos</a>
+                    <a class="fs-6" href="">Fale conosco</a>
+                    <a class="fs-6" href="">Termos de Serviços</a>
                 </div>
             </div>
             <div class="links-externs">
@@ -122,7 +122,7 @@
                 <img src="{% static 'mipscode/svgs/icon-instagram.svg' %}">
             </div>
         </div>
-        <div class="bottom">© 2022 MipsCode. Todos os direitos reservados.</div>
+        <div class="fs-6 bottom">© 2022 MipsCode. Todos os direitos reservados.</div>
     </div>
 </footer>
 

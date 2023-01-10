@@ -8,6 +8,7 @@
     {% load static %}
     {% block statics %}{% endblock statics %}
     <link rel="stylesheet" href="{% static 'mipscode/css/nav-initial.css' %}">
+    <link rel="stylesheet" href="{% static 'mipscode/css/base.css' %}">
 </head>
 
 <body>
@@ -16,15 +17,15 @@
             <div class="header-nav-logo">
                 <img src="{% static 'mipscode/svgs/logo-min.svg' %}" alt="MipsCode Logo" class="logo">
             </div>
+
             <div class="header-nav-links">
-                <a href="{% url 'mipscode:index' %}">Início</a>
-                <a href="{% url 'mipscode:ide' %}">IDE</a>
-                <a href="{% url 'mipscode:index' %}">Fale Conosco</a>
-                <a href="{% url 'mipscode:documentacao' 1 %}">Documentação</a>
+                <a class="fs-6" href="{% url 'mipscode:index' %}">Início</a>
+                <a class="fs-6" href="{% url 'mipscode:ide' %}">IDE</a>
+                <a class="fs-6" href="{% url 'mipscode:documentacao' 1 %}">Documentação</a>
             </div>
             <div class="header-nav-buttons">
-                <a href="{% url 'mipscode:login' %}" class="green-text">Entrar</a>
-                <a href="{% url 'mipscode:cadastro' %}"><input class="white-button" type="button" value="Inscrevar-se"></a>
+                <a href="{% url 'mipscode:login' %}" class="fs-6 color-green">Entrar</a>
+                <a href="{% url 'mipscode:cadastro' %}"><input class="fs-6 button-white" type="button" value="Inscreva-se"></a>
             </div>
         </nav>
 

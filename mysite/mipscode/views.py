@@ -45,8 +45,9 @@ class CadastroView(View):
 class DocumentacaoView(View):
     def get(self, request, *args, **kwargs):
         documentation = get_object_or_404(Documentation, pk = kwargs['pk'])
-        print(documentation)
-        return render(request, "mipscode/documentacao.html",{'document': documentation })
+        title = documentation.title
+        print(documentation.values())
+        return render(request, "mipscode/documentacao.html",{'title':title,'document': documentation })
 
 
 class IdeView(View):

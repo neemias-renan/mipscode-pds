@@ -14,24 +14,6 @@ article .nav-maps {
     align-items: center;
 }
 
-article .nav-maps p {
-    font-size: smaller;
-}
-
-article .nav-maps .text-opacity-mini {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-article .nav-maps .text-opacity-medium {
-    color: #FFFFFF;
-    opacity: 0.8;
-}
-
-article .nav-maps .text-green {
-    color: #2EF2AA;
-}
-
-
 article .content-documentation {
     display: flex;
     flex-direction: row;
@@ -42,7 +24,7 @@ article .content-documentation .content-div {
     width: 70%;
 }
 
-article .content-documentation .content-div .h1 {
+article .content-documentation .content-div .title {
     margin: 0px;
     font-size: 32px;
     border-bottom: 2px solid #333333;
