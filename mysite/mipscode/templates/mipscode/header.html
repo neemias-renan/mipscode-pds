@@ -32,10 +32,9 @@
                 {% endif %}
             </div>
 
-
-
             <div class="nav-buttons">
                 {% if user.is_authenticated %}
+
                 {% else %}
                 <a href="{% url 'mipscode:login' %}" class="fs-navegations color-green">Entrar</a>
                 <a href="{% url 'mipscode:cadastro' %}"><input class="fs-navegations button button-white bold"

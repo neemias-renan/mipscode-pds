@@ -47,9 +47,11 @@
                     <button class="button-open">Abrir arquivos</button>
                     <div class="div-options">
                         {% if projeto.favorite == True %}
-                        <a href="{% url 'mipscode:desfavoritarprojeto' projeto.id %}"><img src="{% static 'mipscode/svgs/icon-favoriteTrue.svg' %}"></a>
+                        <a href="{% url 'mipscode:desfavoritarprojeto' projeto.id %}"><img
+                                src="{% static 'mipscode/svgs/icon-favoriteTrue.svg' %}"></a>
                         {% else %}
-                        <a href="{% url 'mipscode:favoritarprojeto' projeto.id %}"><img src="{% static 'mipscode/svgs/icon-favorite.svg' %}"></a>
+                        <a href="{% url 'mipscode:favoritarprojeto' projeto.id %}"><img
+                                src="{% static 'mipscode/svgs/icon-favorite.svg' %}"></a>
                         {% endif %}
 
                         <button class="buttonOptions" id="buttonOption{{projeto.id}}"
@@ -61,7 +63,9 @@
                 <div class="options-div display-none" id="options-area{{projeto.id}}">
                     <p class="option" onclick="openEditar({{projeto.id}})">Editar</p>
                     <p class="option">Baixar arquivo</p>
-                    <a href="{% url 'mipscode:removerprojeto' projeto.id %}"><p class="option">Apagar</p></a>
+                    <a href="{% url 'mipscode:removerprojeto' projeto.id %}">
+                        <p class="option">Apagar</p>
+                    </a>
                 </div>
             </div>
 
@@ -71,13 +75,15 @@
                         {% csrf_token %}
                         <div class="div-header">
                             <h1>Editar Arquivo</h1>
-            
+
                             <input class="button-close" onclick="closeEditar({{projeto.id}})" type="reset" value="x">
                         </div>
-            
+
                         <div class="content">
-                            <input type="text" class="input-form" name="title" placeholder="Titulo" value="{{projeto.title}}">
-                            <textarea class="input-form textarea" name="description" placeholder="Descrição">{{projeto.description}}</textarea>
+                            <input type="text" class="input-form" name="title" placeholder="Titulo"
+                                value="{{projeto.title}}">
+                            <textarea class="input-form textarea" name="description"
+                                placeholder="Descrição">{{projeto.description}}</textarea>
                             <input type="submit" class="input-button" value="Salvar mudança">
                         </div>
                     </form>
