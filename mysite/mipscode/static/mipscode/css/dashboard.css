@@ -1,25 +1,10 @@
-article {
-    color: white;
-}
-
-.section-links {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 13%;
-    margin-top: 4.5em;
-}
-
-.section-links .title-local {
-    font-size: 1.5em;
-    text-transform: uppercase;
-}
 
 .section-links .div-links {
     display: flex;
     justify-content: space-between;
 }
 
-.section-links .div-links .div {
+.div {
     background: linear-gradient(96.95deg, #19C284 0%, rgba(83, 169, 107, 0.95) 100%);
     border-radius: 4px;
     width: 398px;
@@ -29,33 +14,6 @@ article {
     flex-direction: column;
     gap: 6px;
     justify-content: center;
-}
-
-.section-links .div-links .div .p,
-.section-links .div-links .div .h1 {
-    margin: 0;
-}
-
-.section-links .div-links .div .p {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 110%;
-}
-
-.section-links .div-links .div .h1 {
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 31px;
-}
-
-article .article-header {
-    margin-top: 4.5em;
-    padding: 0px 13%;
 }
 
 article .article-header .title-local {
@@ -70,43 +28,22 @@ article .nav-maps {
     align-items: center;
 }
 
-article .nav-maps p {
-    font-size: smaller;
-}
-
-article .nav-maps .text-opacity-mini {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-article .nav-maps .text-opacity-medium {
-    color: #FFFFFF;
-    opacity: 0.8;
-}
-
-article .nav-maps .text-green {
-    color: #2EF2AA;
-}
 
 
-article .content-projetos {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 13%
-}
 
-article .content-projetos .content-buttons {
+.content-buttons {
     display: flex;
     gap: 1em;
 }
 
-article .content-projetos .content-filtersesearch {
+ .content-filtersesearch {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 3em;
 }
 
-article .content-projetos .content-filtersesearch .search {
+.content-filtersesearch .search {
     background: rgba(217, 217, 217, 0.02);
     border: 1px solid rgba(208, 208, 208, 0.5);
     border-radius: 5px;
@@ -117,7 +54,7 @@ article .content-projetos .content-filtersesearch .search {
     font-family: 'Inter';
 }
 
-article .content-projetos .content-filtersesearch .filters {
+ .content-filtersesearch .filters {
     background: rgba(255, 255, 255, 0.05);
     border: 1.5px solid rgb(255, 255, 255);
     border-radius: 5px;
@@ -128,14 +65,14 @@ article .content-projetos .content-filtersesearch .filters {
     font-family: 'Inter';
 }
 
-article .content-projetos .content-projetos-all {
+.content-projetos-all {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 32px;
     row-gap: 32px;
 }
 
-article .content-projetos .content-projetos-all .project {
+.content-projetos-all .project {
     height: 162px;
     border: 1px solid #333333;
     border-radius: 13px;
@@ -146,19 +83,19 @@ article .content-projetos .content-projetos-all .project {
     flex-direction: column;
 }
 
-article .content-projetos .content-projetos-all .project .titles {
+.content-projetos-all .project .titles {
     display: flex;
     flex-direction: column;
 }
 
-article .content-projetos .content-projetos-all .project .titles .title {
+.content-projetos-all .project .titles .title {
     font-weight: 700;
     font-size: 19px;
     line-height: 110%;
     margin: 0;
 }
 
-article .content-projetos .content-projetos-all .project .titles .time {
+.content-projetos-all .project .titles .time {
     font-weight: 400;
     font-size: 13px;
     line-height: 17px;
@@ -166,7 +103,7 @@ article .content-projetos .content-projetos-all .project .titles .time {
     margin: 2px 0px 6px;
 }
 
-article .content-projetos .content-projetos-all .project .titles .description {
+ .content-projetos-all .project .titles .description {
     font-weight: 400;
     font-size: 16px;
     line-height: 110%;
@@ -174,13 +111,13 @@ article .content-projetos .content-projetos-all .project .titles .description {
     margin: 0;
 }
 
-article .content-projetos .content-projetos-all .project .options {
+ .content-projetos-all .project .options {
     display: flex;
     align-items: center;
     gap: 2em;
 }
 
-article .content-projetos .content-projetos-all .project .options .button-open {
+.content-projetos-all .project .options .button-open {
     background: rgba(46, 242, 170, 0.05);
     border: 1px solid #2EF2AA;
     border-radius: 5px;
@@ -191,7 +128,7 @@ article .content-projetos .content-projetos-all .project .options .button-open {
     font-family: 'Inter';
 }
 
-article .content-projetos .content-projetos-all .project .options .div-options {
+.content-projetos-all .project .options .div-options {
     display: flex;
     gap: 2em;
     align-items: center;
@@ -199,7 +136,7 @@ article .content-projetos .content-projetos-all .project .options .div-options {
 
 
 
-article .content-projetos .content-buttons .button-green-solid {
+.content-buttons .button-green-solid {
     background: #2EF2AA;
     border: 1px solid #2EF2AA;
     border-radius: 5px;
@@ -213,7 +150,7 @@ article .content-projetos .content-buttons .button-green-solid {
     font-weight: 600;
 }
 
-article .content-projetos .content-buttons .button-white-solid {
+.content-buttons .button-white-solid {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid #FFFFFF;
     border-radius: 5px;

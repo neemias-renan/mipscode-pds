@@ -1,4 +1,4 @@
-{% extends "mipscode/nav-initial.html" %}
+{% extends "mipscode/header.html" %}
 {% load static %}
 
 {% block statics %}
@@ -6,59 +6,27 @@
 {% endblock statics %}
 
 {% block article %}
-<article>
-    <section class="section-one">
-        <form action="{% url 'mipscode:login' %}" method="post" class="form">
+<article class="column padding-padrao">
+    <section class="section-one column align-center">
+        <form action="{% url 'mipscode:login' %}" method="post" class="form row align-center">
             {% csrf_token %}
-            <h3>ENTRE NA SUA CONTA</h3>
-            <div class="div-form">
-                <input class="input-form" type="text" name="username" placeholder="Email ou nome de usuário">
-                <input class="input-form" type="password" name="password" placeholder="Senha">
-                <input class="input-button" type="submit" value="Conecte-se">
+            <h3 class="fs-3">ENTRE NA SUA CONTA</h3>
+            <div class="div-form column">
+                <input class="fs-6 input" type="text" name="username" placeholder="Email ou nome de usuário"
+                    autocomplete="off">
+                <input class="fs-6 input" type="password" name="password" placeholder="Senha" autocomplete="off">
+                <input class="button button-green color-green fs-6 bold" type="submit" value="Conecte-se">
                 <p class="p_message">{{mensagem}}</p>
-                <div class="division">
-                    <a href="{% url 'mipscode:cadastro' %}" class="text-green">Crie sua conta</a>
-                    <a href="#">Esqueceu a senha?</a>
+                <div class="division margin-top-1">
+                    <a href="{% url 'mipscode:cadastro' %}" class="fs-6 color-green ">Crie sua conta</a>
+                    <a href="#" class="fs-6 color-white">Esqueceu a senha?</a>
                 </div>
-                <a href="#">
-                    <button class="input-button-link">
-                        <img src="{% static 'mipscode/svgs/icon-google.svg' %}">
-                        Continuar com o Google
-                    </button>
-                </a>
+                <button class="button button-white color-white">
+                    <img src="{% static 'mipscode/svgs/icon-google.svg' %}">
+                    Continuar com o Google
+                </button>
             </div>
         </form>
     </section>
-
-
-    <footer>
-        <div class="div-padding">
-            <div class="top">
-                <img class="logo-white" src="{% static 'mipscode/svgs/logo-white.svg' %}">
-                <div class="group">
-                    <div class="links">
-                        <h4>Rotas Principais</h4>
-                        <a href="">Tutorial</a>
-                        <a href="">Comunidade</a>
-                        <a href="">Documentação</a>
-                        <a href="">Artigos</a>
-                        <a href="">Fórum</a>
-                    </div>
-
-                    <div class="links">
-                        <h4>Sobre nós</h4>
-                        <a href="">Quem Somos</a>
-                        <a href="">Fale conosco</a>
-                        <a href="">Termos de Serviços</a>
-                    </div>
-                </div>
-                <div class="links-externs">
-                    <img src="{% static 'mipscode/svgs/icon-github.svg' %}">
-                    <img src="{% static 'mipscode/svgs/icon-instagram.svg' %}">
-                </div>
-            </div>
-            <div class="bottom">© 2022 MipsCode. Todos os direitos reservados.</div>
-        </div>
-    </footer>
 </article>
 {% endblock article %}
